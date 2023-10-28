@@ -369,7 +369,7 @@ async def project_read(callback: types.CallbackQuery):
                 st = str(i)
                 keyboard_project_read.add(types.InlineKeyboardButton(text=st[2:-3], callback_data=st[2:-3]))
                 itog.append(st[2:-3])
-            await callback.message.answer("Ваши резюме:", reply_markup=keyboard_project_read)
+            await callback.message.answer("Ваши проекты:", reply_markup=keyboard_project_read)
             await callback.answer()
             await project_states.read_project.set()
     except:
